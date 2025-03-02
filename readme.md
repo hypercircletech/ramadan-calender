@@ -22,7 +22,7 @@
 
 ## Support
 
-For any issues or feedback, please open an issue on GitHub or contact us at [support@hypercircle.tech](mailto:support@hypercircle.tech).
+For any issues or feedback, please open an issue on GitHub or contact us at [hello@hypercircle.tech](mailto:hello@hypercircle.tech).
 
 ---
 
