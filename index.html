@@ -6,9 +6,37 @@
     <title>রমজানের সময়সূচী ২০২৫ - Hypercircle Technology</title>
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/png" href="favicon.jpg">
-     <meta property="og:image" content="favicon.jpg"/>
+    <meta name="description" content="২০২৫ সালের রমজান মাসের সময়সূচী দেখুন এবং শেয়ার করুন। সেহরী ও ইফতারের সঠিক সময় জানুন।">
+    <meta name="keywords" content="রমজানের সময়সূচী, সেহরী, ইফতার, ২০২৫, Hypercircle Technology">
+    <meta name="author" content="Hypercircle Technology">
+    <meta name="theme-color" content="#0057b8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TBL7NN2S');</script>
+<!-- End Google Tag Manager -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ramadan.hypercircle.tech/">
+    <meta property="og:title" content="রমজানের সময়সূচী ২০২৫ - Hypercircle Technology">
+    <meta property="og:description" content="২০২৫ সালের রমজান মাসের সময়সূচী দেখুন এবং শেয়ার করুন। সেহরী ও ইফতারের সঠিক সময় জানুন।">
+    <meta property="og:image" content="https://ramadan.hypercircle.tech/favicon.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ramadan.hypercircle.tech/">
+    <meta property="twitter:title" content="রমজানের সময়সূচী ২০২৫ - Hypercircle Technology">
+    <meta property="twitter:description" content="২০২৫ সালের রমজান মাসের সময়সূচী দেখুন এবং শেয়ার করুন। সেহরী ও ইফতারের সঠিক সময় জানুন।">
+    <meta property="twitter:image" content="https://ramadan.hypercircle.tech/favicon.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ramadan.hypercircle.tech/">
+    
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Hind Siliguri', sans-serif;
@@ -16,6 +44,9 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full viewport height */
         }
         header {
             background-color: #0057b8;
@@ -62,8 +93,9 @@
         }
         .container {
             padding: 20px;
+            flex: 1; /* Allow the container to grow and take up remaining space */
         }
-        h1 {
+        h1, .time {
             text-align: center;
             color: #0057b8;
         }
@@ -72,15 +104,15 @@
             font-weight: 500;
         }
         #citySelect {
-    font-size: 18px;
-    text-align:center;
-    padding: 12px;
-    height: 50px;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
+            font-size: 18px;
+            text-align:center;
+            padding: 12px;
+            height: 50px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -98,13 +130,15 @@
             color: white;
         }
         .highlight {
-            background-color: #e0f7fa;
+            background-color: #0057b8;
+            color:white;
         }
         footer {
             background-color: #0057b8;
             color: white;
             padding: 20px;
             text-align: center;
+            flex-shrink: 0; /* Prevent the footer from shrinking */
         }
         footer .footer-logo img {
             height: 40px;
@@ -120,6 +154,38 @@
             margin-top: 10px;
             font-size: 14px;
         }
+        /* Share Button Styles */
+        .share-button {
+            position: fixed;
+            bottom: 80px; /* Adjusted to avoid overlapping with the sticky footer */
+            right: 20px;
+            background-color: #0057b8;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover Effect */
+        .share-button:hover {
+            background-color: #004494;
+        }
+
+        /* Real-time Clock Styles */
+        .realtime-clock {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -129,7 +195,8 @@
         </div>
         <nav id="navbar">
             <a href="https://hypercircle.tech/">হোম</a>
-            <a href="#ramadanTable">সময়সূচী</a>
+            <a href="#ramadanTable">রমজানের সময়সূচী</a>
+            <a href="#prayerTimesTable">নামাজের সময়সূচী</a>
             <a href="https://my.hypercircle.tech">আমাদের সার্ভিসসমূহ</a>
             <a href="http://m.me/hypercircle.tech">যোগাযোগ</a>
         </nav>
@@ -137,7 +204,7 @@
     </header>
     <div class="container">
         <h1>রমজানের সময়সূচী ২০২৫</h1>
-        <label for="citySelect">শহর নির্বাচন করুন:</label>
+        <label for="citySelect">বিভাগ নির্বাচন করুন:</label>
         <select id="citySelect">
             <option value="Dhaka">ঢাকা</option>
             <option value="Chattogram">চট্টগ্রাম</option>
@@ -151,7 +218,7 @@
         <table id="ramadanTable">
             <thead>
                 <tr>
-                    <th>দিন</th>
+                    <th>রমজান</th>
                     <th>তারিখ</th>
                     <th>সেহরী</th>
                     <th>ইফতার</th>
@@ -160,8 +227,35 @@
             <tbody>
             </tbody>
         </table>
-    </div>
 
+        <!-- নামাজের সময়সূচী Table -->
+        <h1>নামাজের সময়সূচী </h1>
+        <h3 class="time">সময়ঃ <span id="realtimeClock"></span>
+       </h3> <table id="prayerTimesTable">
+            <thead>
+                <tr>
+                    <th>ফজর</th>
+                    <th>যোহর</th>
+                    <th>আসর</th>
+                    <th>মাগরিব</th>
+                    <th>ইশা</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="fajr">-</td>
+                    <td id="dhuhr">-</td>
+                    <td id="asr">-</td>
+                    <td id="maghrib">-</td>
+                    <td id="isha">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Share Button -->
+    <button id="shareButton" class="share-button">
+        <i class="fas fa-share"></i>
+    </button>
     <footer>
         <div class="footer-logo">
             <img src="hc-logo.png" alt="Logo">
@@ -169,49 +263,119 @@
         <div class="social-links">
             <a href="https://www.facebook.com/hypercircle.tech"><i class="fab fa-facebook"></i></a>
             <a href="https://x.com/hypercircletech">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.957 6.817H2.25l7.73-8.835L1.5 2.25h7.914l4.714 6.231 5.566-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
-    </svg>
-</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.957 6.817H2.25l7.73-8.835L1.5 2.25h7.914l4.714 6.231 5.566-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+                </svg>
+            </a>
             <a href="https://www.instagram.com/hypercircle.tech"><i class="fab fa-instagram"></i></a>
         </div>
         <div class="copyright">
             &copy; 2025 Hypercircle Technology | All Rights Reserved.
         </div>
     </footer>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBL7NN2S"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <script>
         const citySelect = document.getElementById('citySelect');
         const tableBody = document.querySelector('#ramadanTable tbody');
+        const fajrElement = document.getElementById('fajr');
+        const dhuhrElement = document.getElementById('dhuhr');
+        const asrElement = document.getElementById('asr');
+        const maghribElement = document.getElementById('maghrib');
+        const ishaElement = document.getElementById('isha');
+        const realtimeClockElement = document.getElementById('realtimeClock');
+
+        // Function to convert 24-hour time to 12-hour format with AM/PM
+        function convertTo12HourFormat(time) {
+            const [hour, minute] = time.split(':');
+            let period = 'AM';
+            let hour12 = parseInt(hour, 10);
+
+            if (hour12 >= 12) {
+                period = 'PM';
+                if (hour12 > 12) hour12 -= 12;
+            }
+            if (hour12 === 0) hour12 = 12; // Handle midnight (00:00)
+
+            return `${hour12}:${minute} ${period}`;
+        }
+
+        // Function to update the real-time clock
+        function updateClock() {
+            const now = new Date();
+            const options = { timeZone: 'Asia/Dhaka', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+            const timeString = now.toLocaleTimeString('en-US', options);
+            realtimeClockElement.textContent = timeString;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call to display the clock immediately
 
         function fetchData(division) {
             fetch(`api.php?division=${division}`)
                 .then(response => response.json())
                 .then(data => {
-                    tableBody.innerHTML = '';
+                    tableBody.innerHTML = ''; // Clear the table body
+
+                    // Get today's date in DD.MM.YYYY format
+                    const today = new Date();
+                    const day = String(today.getDate()).padStart(2, '0'); // Ensure 2 digits for day
+                    const month = String(today.getMonth() + 1).padStart(2, '0'); // Ensure 2 digits for month
+                    const year = today.getFullYear();
+                    const todayFormatted = `${day}.${month}.${year}`; // Format as DD.MM.YYYY
+
                     data.forEach(day => {
                         const row = document.createElement('tr');
                         row.innerHTML = `
                             <td>${day.day}</td>
                             <td>${day.date}</td>
-                            <td>${day.sehri_12hr}</td>
-                            <td>${day.iftar_12hr}</td>
+                            <td>${day.sehri}</td>
+                            <td>${day.iftar}</td>
                         `;
-                        if (day.date === new Date().toISOString().split('T')[0]) {
-                            row.classList.add('highlight');
+
+                        // Compare the date from the data with today's date
+                        if (day.date === todayFormatted) {
+                            row.classList.add('highlight'); // Add the highlight class if it's today
                         }
-                        tableBody.appendChild(row);
+
+                        tableBody.appendChild(row); // Append the row to the table
                     });
+
+                    // Fetch prayer times for today
+                    fetchPrayerTimes(division, todayFormatted);
                 })
                 .catch(error => console.error('Error fetching data:', error));
         }
 
+        function fetchPrayerTimes(division, date) {
+            const [day, month, year] = date.split('.');
+            const apiUrl = `https://api.aladhan.com/v1/timingsByCity/${year}-${month}-${day}?city=${division}&country=Bangladesh&method=1`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const timings = data.data.timings;
+                    fajrElement.textContent = convertTo12HourFormat(timings.Fajr);
+                    dhuhrElement.textContent = convertTo12HourFormat(timings.Dhuhr);
+                    asrElement.textContent = convertTo12HourFormat(timings.Asr);
+                    maghribElement.textContent = convertTo12HourFormat(timings.Maghrib);
+                    ishaElement.textContent = convertTo12HourFormat(timings.Isha);
+                })
+                .catch(error => console.error('Error fetching prayer times:', error));
+        }
+
+        // Initial fetch for the default city
         fetchData(citySelect.value);
 
+        // Add event listener for city selection change
         citySelect.addEventListener('change', (event) => {
             fetchData(event.target.value);
         });
 
+        // Hamburger menu toggle for mobile
         const hamburger = document.getElementById('hamburger');
         const navbar = document.getElementById('navbar');
 
@@ -219,15 +383,37 @@
             navbar.classList.toggle('active');
         });
 
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-                .then((registration) => {
-                    console.log('Service Worker registered with scope:', registration.scope);
-                })
-                .catch((error) => {
-                    console.log('Service Worker registration failed:', error);
-                });
-        }
+      if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then((registration) => {
+      console.log('Service Worker registered with scope:', registration.scope);
+    })
+    .catch((error) => {
+      console.log('Service Worker registration failed:', error);
+    });
+}
+        // Share button functionality
+        document.getElementById('shareButton').addEventListener('click', () => {
+            const shareContent = {
+                title: 'রমজানের সময়সূচী ২০২৫',
+                text: 'রমজানের সময়সূচী দেখুন এবং শেয়ার করুন: ' + window.location.href,
+                url: window.location.href
+            };
+
+            if (navigator.share) {
+                navigator.share(shareContent)
+                    .then(() => {
+                        console.log('শেয়ার করার জন্য ধন্যবাদ!');
+                    })
+                    .catch((error) => {
+                        console.error('শেয়ার করতে সমস্যা হয়েছে:', error);
+                    });
+            } else {
+                alert('আপনার ব্রাউজারে শেয়ার সাপোর্ট করা হয় না।');
+            }
+        });
     </script>
+    
+
 </body>
 </html>
