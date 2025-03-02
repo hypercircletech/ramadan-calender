@@ -9,9 +9,7 @@
 - 🌙 **Accurate Prayer Times:** Get precise prayer timings based on your location.
 - 🕒 **Iftar & Suhoor Schedules:** Never miss Iftar or Suhoor with timely reminders.
 - 📱 **PWA Support:** Install the app on your device for offline access.
-- 🌍 **Global Compatibility:** Works seamlessly worldwide with location-based timings.
 - 🎨 **Simple & Clean Design:** Easy-to-use interface for a hassle-free experience.
-- 🔔 **Custom Reminders:** Set reminders for prayers, Iftar, and Suhoor.
 - 📅 **Ramadan Countdown:** Track the days remaining until Ramadan begins.
 
 ## How to Install
